@@ -12,4 +12,4 @@ clean:
 
 .PHONY: run
 run: $(TARGET)
-	../../../../pin -t ../obj-intel64/Overflow.so -- ./$(TARGET)
+	$(PIN_ROOT)/pin -t ../obj-intel64/Overflow.so -- ./$(TARGET)
