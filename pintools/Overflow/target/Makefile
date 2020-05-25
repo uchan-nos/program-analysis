@@ -1,10 +1,11 @@
 TARGET = of
+CFLAGS = -fno-PIE
 
 .PHONY: all
 all: $(TARGET)
 
 $(TARGET): $(TARGET).o
-	$(CC) -o $@ $^
+	$(CC) -o $@ $^ -no-pie
 
 .PHONY: clean
 clean:
