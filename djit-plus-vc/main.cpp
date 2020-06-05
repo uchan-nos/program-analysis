@@ -54,12 +54,12 @@ int main() {
   Analyzer<kNumThread> a;
   a.SetReadViolationHandler(
     [](const auto& an, int t, const auto& x) {
-      std::cout << "race condition detected: rd("
+      std::cout << "data race is detected: rd("
                 << t << "," << x.name << ")" << std::endl;
     });
   a.SetWriteViolationHandler(
     [](const auto& an, int t, const auto& x) {
-      std::cout << "race condition detected: wr("
+      std::cout << "data race is detected: wr("
                 << t << "," << x.name << ")" << std::endl;
     });
 
